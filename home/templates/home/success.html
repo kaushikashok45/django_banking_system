@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+
+{% block col1 %}
+  <img id="usrimg" src="../../static/images/success.png">
+  <h1>Transaction Successful!</h1>
+  <h1>Transaction ID: {{tid}}</h1>
+  <h2><a href="{% url 'index' %}">Click here to get redirected to the home page.</a></h2>
+{% endblock %}
+
+{% block col2 %}
+{% endblock %}
+
+

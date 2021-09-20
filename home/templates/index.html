@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block col1 %}
+  <h1>Welcome to Banking System</h1>
+  <h2>Developed by Ashok
+{% endblock %}
+
+{% block col2 %}
+  <h2>This Banking system has accomplished the following:</h2>
+  <ul>
+    <li><h3><strong>Customers:</strong> {{ num_customers }}</h3></li>
+    <li><h3><strong>Transactions:</strong> {{ num_transactions }}</h3></li>
+  </ul>
+{% endblock %}
+
+

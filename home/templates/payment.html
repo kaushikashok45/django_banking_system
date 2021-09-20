@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    {%block title%}<title>Banking System</title>{%endblock%}
+    <link rel="stylesheet" type="text/css" href="../../../static/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="../../../static/css/custprofile2.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@700&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran&family=Manrope:wght@300&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  </head>
+  <body>  
+   <div id="box" id="table">
+    <div id="boxcol1">
+     {% block col1 %}
+      <h1>Payment Details</h1>      
+     {% endblock %} 
+    </div> 
+    <div id="boxcol2">
+      {% block col2 %}
+       <h2><strong>From CID:</strong> <span id="ans">{{fcid}}</span></h2>
+       <h2><strong>To CID:</strong> <span id="ans">{{tcid}}</span></h2>
+       <form action="{% url 'process' tcid=tcid fcid=fcid %}" method="post">
+         {% csrf_token %}  
+         <label id="labe" for="amount">Amount: </label>
+         <input id="amount" type="number" step="0.1" name="amount" value="{{ current_amount }}">
+         <button type="submit" class="slide">
+           <div>Pay Now</div>
+           <i class="icon-arrow-right"></i>
+         </button>
+       </form>
+      {% endblock %}
+    </div>    
+   </div>
+   <div id="extra">
+      {% block extras %}
+      
+      {% endblock %}
+   </div>   
+  </body>
+</html>
+
+
+
+

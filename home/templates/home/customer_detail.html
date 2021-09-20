@@ -1,0 +1,25 @@
+{% extends "cust_base_generic.html" %}
+
+{%block title%}<title>{{customer.first_name}} Details</title>{%endblock%}
+
+{% block col1 %}
+   <h1>{{customer.first_name}}</h1>
+   <img id="usrimg" src="../../static/images/user.png">      
+{% endblock %} 
+
+{% block col2 %}
+  <h1>Details</h1>
+  <h2><strong>First Name:</strong> <span id="ans">{{ customer.first_name}}</span></h2>
+  <h2><strong>Last Name:</strong> <span id="ans">{{ customer.last_name }}</span></h2>
+  <h2><strong>Customer ID:</strong> <span id="ans">{{ customer.cid }}</span></h2>
+  <h2><strong>Email ID:</strong> <span id="ans">{{ customer.email_id }}</span></h2>
+  <h2><strong>Phone:</strong> <span id="ans">{{ customer.phone }}</span></h2>
+  <h2><strong>Balance:</strong> <span id="ans">&#x20b9;{{ customer.balance}}</span></h2>
+  <h2><strong>Transactions performed:</strong> <span id="ans">{{ customer.transax}}</span></h2>
+{% endblock %}
+{% block extras %}
+ <button type="submit" class="slide" onclick="location.href='{% url "actionUrl" cid=customer.cid %}'">
+   <div>Transact now</div>
+   <i class="icon-arrow-right"></i>
+ </button>
+{% endblock %}

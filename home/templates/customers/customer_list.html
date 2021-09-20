@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    {%block title%}<title>Customers List</title>{%endblock%}
+    <link rel="stylesheet" type="text/css" href="../../static/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="../../static/css/customer.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran&family=Manrope:wght@300&display=swap" rel="stylesheet"> 
+  </head>
+  <body>  
+   <div id="box">
+     {% block col1 %}
+      {% block info %} <h1>Customer List</h1> {% endblock %}
+      {% if customer_list %}
+        <div class="tbl-header" >    
+          <table cellpadding="0" cellspacing="0" border="0">
+            <thead>
+              <tr>
+               <th>Customer ID</th>
+               <th>First Name</th>
+               <th>Last Name</th>
+               <th>Balance</th>
+              </tr>
+            </thead>
+          </table>
+        </div>  
+        <div class="tbl-content">
+          <table cellpadding="0" cellspacing="0" border="0">
+            <tbody>
+              {% for customer in customer_list %}
+                <tr>         
+                 <td><a href="{{ customer.get_absolute_url }}">{{ customer.cid }}</a></td>
+                 <td>{{customer.first_name}}</td> 
+                 <td>{{customer.last_name}}</td>
+                 <td>&#x20b9;{{customer.balance}}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>  
+      {% else %}
+        <p>No customer data found.</p>
+      {% endif %}          
+    {% endblock %} 
+   </div>
+   <div id="extra">
+      {% block extras %}
+      {% endblock %}
+   </div>   
+  </body>
+</html>
+
+
+

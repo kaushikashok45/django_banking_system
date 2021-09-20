@@ -1,0 +1,132 @@
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    background-repeat: no-repeat;
+    height: 625px;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+#box {
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 1em;
+    margin-top:7vw;
+    margin-left: 21vw;
+    display: inline-grid;
+    grid-template-columns: 100% 0%;
+    vertical-align: middle;
+    text-align:center;
+}
+
+
+#usrimg{
+    padding-top: 50px;
+    padding-left: 10px;
+    height: 150px;
+}
+
+#boxcol1{
+    text-align: center;
+    opacity: 0.8;
+    font-family: 'Concert One', cursive;
+    padding: 9vw 4vw;
+    color: black;
+}
+
+#boxcol1 h1{
+    padding-left: 10px;
+    font-family: 'Concert One', cursive;
+    color: tomato;
+}
+
+
+
+
+
+#ans{
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: 1px solid purple underline;
+}
+
+#extra{
+    position:relative; 
+    margin-top:1vw; 
+    margin-left:41.5vw;
+ 
+}
+
+ a, a:hover, a:focus, a:active {
+     text-decoration: none;
+     color: inherit;
+ }
+
+ button {
+  margin: 50px;
+  font-family: inherit;
+}
+
+.slide {
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 30px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.slide i {
+  opacity: 0;
+  font-size: 13px;
+  transition: 0.2s;
+  position: absolute;
+  right: 10px;
+  top: 21px;
+  transition: transform 1;
+}
+
+.slide div {
+  transition: transform 0.8s;
+}
+
+.slide:hover div {
+  transform: translateX(-6px);
+}
+
+.slide::after {
+  content: "";
+  background-color: #66f2d5;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+}
+
+.slide:hover i {
+  opacity: 1;
+  transform: translateX(-6px);
+}
+
+#amount{
+  font-size: 2vw;
+}
+
+#labe{
+  font-size: 1.5vw;
+}

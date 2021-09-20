@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    {%block title%}<title>Banking System</title>{%endblock%}
+    <link rel="stylesheet" type="text/css" href="../../static/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="../../static/css/profile.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@700&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran&family=Manrope:wght@300&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  </head>
+  <body>  
+   <div id="box" id="table">
+    <div id="boxcol1">
+     {% block col1 %}
+      <img id="usrimg" src="../static/images/user.png">      
+     {% endblock %} 
+    </div> 
+    <div id="boxcol2">
+      {% block col2 %}{% endblock %}
+    </div>    
+   </div>
+   <div id="extra">
+      {% block extras %}
+       <button type="button" class="slide">
+         <div><a href="{% url 'customers' %}" >View Customers</a></div>
+         <i class="icon-arrow-right"></i>
+       </button>
+      {% endblock %}
+   </div>   
+  </body>
+</html>
+
+
+

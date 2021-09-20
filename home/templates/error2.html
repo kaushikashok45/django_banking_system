@@ -1,0 +1,12 @@
+{% extends "error.html" %}
+
+{% block col1 %}
+    <img id="usrimg" src="../../../../static/images/error.png">
+    <h1>Transaction Failed!</h1>
+    <h1>Enter a valid amount.</h1>
+    <br>
+    <br>
+    <h4 id="ans"><a href="{% url 'index' %}">Click here to get redirected to the home page.</a></h4>
+{% endblock %}
+
+
