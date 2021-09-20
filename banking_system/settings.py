@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-okoh(&*op1i(6xll2gxpz(k6oofbu0c(a_9=kebl%@#13bcpnc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [warm-sierra-01946.herokuapp.com,]
+ALLOWED_HOSTS = ['warm-sierra-01946.herokuapp.com',]
 
 
 # Application definition
