@@ -8,4 +8,6 @@ urlpatterns = [
     path('actionUrl/<uuid:cid>',views.transac,name='actionUrl'),
     path('payment/<uuid:tcid>/<uuid:fcid>',views.pay,name='payment'),
     path('process/<uuid:tcid>/<uuid:fcid>',views.process,name='process'),
+    path('payment2',views.index2,name='index2'),
+    path('paymenthandler/', views.paymenthandler, name='paymenthandler'),
 ]

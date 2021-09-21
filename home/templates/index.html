@@ -6,11 +6,22 @@
 {% endblock %}
 
 {% block col2 %}
-  <h2>This Banking system has accomplished the following:</h2>
+  <h2>Thise Banking system has accomplished the following:</h2>
   <ul>
     <li><h3><strong>Customers:</strong> {{ num_customers }}</h3></li>
     <li><h3><strong>Transactions:</strong> {{ num_transactions }}</h3></li>
   </ul>
 {% endblock %}
 
-
+{% block extras %}
+  <button type="button" class="slide">
+    <div><a href="{% url 'customers' %}" >View Customers</a></div>
+    <i class="icon-arrow-right"></i>
+  </button>
+  <br>
+  <br>
+  <button type="button" class="slide">
+    <div><a href="{% url 'index2' %}" >Donate</a></div>
+    <i class="icon-arrow-right"></i>
+  </button>
+{% endblock %}
